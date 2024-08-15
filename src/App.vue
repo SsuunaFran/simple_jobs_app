@@ -1,26 +1,27 @@
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-card>
+    <v-layout>
+      <v-app-bar color="green-darken-1" class="mb-1">
+        <v-icon>mdi-account</v-icon> <!-- Directly use the icon name -->
+        <v-toolbar-title class="font-weight-bold">Jobs App</v-toolbar-title>
+      <v-btn class="text-none" text to="/">Home</v-btn>
+      <v-btn class="text-none" text to="/jobs">Jobs</v-btn>
+      <v-btn class="text-none" text to="/addjob">Add Job</v-btn>
+      </v-app-bar>
+      <v-main class="mt-1">
+        <router-view/>
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import AppBody from './components/body.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  setup(){
+    
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
